@@ -1,0 +1,125 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', 'Verdana';
+}
+
+body > header {
+  padding: 25px 0;
+  background: rgb(54, 65, 94);
+  color: whitesmoke;
+  text-align: center;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%; height: 100%;
+}
+main {
+  width: 100%;
+  padding: 1% 12%;
+}
+
+.adsbygoogle {
+  margin-top: 15px;
+  margin-left: -webkit-calc(50% - 485px);
+  margin-left: -moz-calc(50% - 485px);
+  margin-left: calc(50% - 485px);
+}
+
+footer {
+  padding: 38px 10%;
+  background: rgb(54, 65, 94);
+  color: whitesmoke;
+  margin-top: 10px;
+}
+footer div.list {
+  padding: 0 20px;
+}
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(244, 245, 215);
+}
+footer dl dd {
+  margin-bottom: 10px;
+}
+
+/**/
+
+main {
+  min-height: 800px;
+}
+
+.form textarea {
+  width: 100%;
+  height: 240px;
+}
+.form label[for="return"] {
+  margin: 20px;
+}
+.form button {
+  float: right;
+}
+
+.desc {
+  padding: 0 70px;
+}
+
+a.print {
+  text-align: right;
+  float: right;
+}
+
+.round {
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: avoid;
+}
+.round h3, .round .game {
+  page-break-after: avoid;
+  page-break-before: avoid;
+  page-break-inside: avoid;
+}
+
+.team {
+  font-size: 2em;
+}
+.x {
+  text-align: center;
+  font-size: 2em;
+  font-family: Verdana;
+ }
+.away.team { text-align: right }
+
+@media print {
+  body { padding: auto 15%; }
+  body > header {
+    margin: 0;
+    line-height: 1em;
+  }
+  body > header h1 {
+    visibility: hidden;
+    margin: 0 10px;
+  }
+  body > header h1::after {
+    content: 'tabelas.alhur.es';
+    visibility: visible;
+    display: block;
+  }
+  .print { display: none }
+  .ad { display: none }
+  footer { display: none }
+}
+
+#explanation {
+  margin: 23px auto;
+  width: 50%;
+  
+}
+@media (max-width: 1098px) {
+  #explanation { width: 80%; }
+}
+
+#explanation pre { background-color: bisque; padding: 9px }
