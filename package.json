@@ -1,0 +1,44 @@
+{
+  "name": "tabelas.alhur.es",
+  "version": "1.0.0",
+  "description": "gerador de tabelas de campeonato.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiatjaf/tabelas.alhur.es.git"
+  },
+  "keywords": [
+    "round-robin",
+    "tabelas",
+    "todos-contra-todos",
+    "fixtures",
+    "turno",
+    "returno"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "bubleify",
+        {
+          "transforms": {
+            "dangerousTaggedTemplateString": true
+          }
+        }
+      ]
+    ]
+  },
+  "author": "fiatjaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiatjaf/tabelas.alhur.es/issues"
+  },
+  "homepage": "https://github.com/fiatjaf/tabelas.alhur.es#readme",
+  "dependencies": {
+    "roundrobin": "^1.0.3",
+    "shuffle-array": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "bubleify": "^0.7.0"
+  }
+}
