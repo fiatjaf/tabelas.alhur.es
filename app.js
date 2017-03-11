@@ -35,7 +35,7 @@ $('body').on('submit', 'form', function (e) {
     .filter(function (x) { return x })
 
   console.log(teams)
-  if (window.tc) window.tc()
+  if (window.tc) window.tc(1)
 
   var rematch = $('#return').prop('checked')
   var shuffle = $('#shuffle').prop('checked')
