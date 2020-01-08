@@ -21,11 +21,11 @@ main {
   padding: 1% 12%;
 }
 
-.adsbygoogle {
+iframe {
   margin-top: 15px;
-  margin-left: -webkit-calc(50% - 485px);
-  margin-left: -moz-calc(50% - 485px);
-  margin-left: calc(50% - 485px);
+  margin-left: -webkit-calc(50% - 366px);
+  margin-left: -moz-calc(50% - 366px);
+  margin-left: calc(50% - 366px);
 }
 
 footer {
@@ -116,7 +116,7 @@ a.print {
 #explanation {
   margin: 23px auto;
   width: 50%;
-  
+
 }
 @media (max-width: 1098px) {
   #explanation { width: 80%; }

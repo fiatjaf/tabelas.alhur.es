@@ -1,7 +1,7 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var $ = window.jQuery
-var robin = require('roundrobin')
-var shufflearray = require('shuffle-array')
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const $ = window.jQuery
+const robin = require('roundrobin')
+const shufflearray = require('shuffle-array')
 
 function compute_rounds (teams, dorematch, shuffle) {
   if (shuffle) {
@@ -36,7 +36,7 @@ $('body').on('submit', 'form', function (e) {
     .filter(function (x) { return x })
 
   console.log(teams)
-  if (window.tc) { window.tc() }
+  if (window.tc) window.tc(1)
 
   var rematch = $('#return').prop('checked')
   var shuffle = $('#shuffle').prop('checked')
@@ -46,7 +46,18 @@ $('body').on('submit', 'form', function (e) {
   $('main').html('')
 
   var rendered = $('<div>')
-    .append("\n<div class=\"ad\">\n  <script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n  <!-- big-header -->\n  <ins class=\"adsbygoogle\"\n       style=\"display:inline-block;width:970px;height:90px\"\n       data-ad-client=\"ca-pub-2758632292127860\"\n       data-ad-slot=\"7802966782\"></ins>\n  <script>\n  (adsbygoogle = window.adsbygoogle || []).push({});\n  </script>\n</div>\n    ")
+    .append(`
+<script type="text/javascript">
+	atOptions = {
+		'key' : '0c9d6daa95659d7574a12c0286c8b2b1',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.madcpms.com/0c9d6daa95659d7574a12c0286c8b2b1/invoke.js"></scr' + 'ipt>');
+</script>
+    `)
     .append(
       $('<div>').addClass('pure-u-1').append(
         $('<a>')

@@ -46,17 +46,16 @@ $('body').on('submit', 'form', function (e) {
 
   var rendered = $('<div>')
     .append(`
-<div class="ad">
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- big-header -->
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:970px;height:90px"
-       data-ad-client="ca-pub-2758632292127860"
-       data-ad-slot="7802966782"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '0c9d6daa95659d7574a12c0286c8b2b1',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.madcpms.com/0c9d6daa95659d7574a12c0286c8b2b1/invoke.js"></scr' + 'ipt>');
+</script>
     `)
     .append(
       $('<div>').addClass('pure-u-1').append(
