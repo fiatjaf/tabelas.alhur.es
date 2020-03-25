@@ -1,115 +1,247 @@
-<!doctype html>
+<!-- @format -->
+
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Gerador de tabelas" />
-  <meta property="og:description" content="Todos contra todos. Defina os times, clique, imprima, feche a página. Grátis, sem cadastro, sem burocracia." />
-  <meta property="og:image" content="/static/logo.png" />
-  <meta name="description" content="Defina os times, clique, imprima, feche a página. Grátis, sem cadastro, sem burocracia.">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="icon" type="image/png" href="/static/logo.png" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
-  <link rel="stylesheet" href="/static/site.css">
-  <title>Gerador de tabelas de campeonato</title>
-  <script>
-(function (d, s, c) {
-  var x, h, n = Date.now()
-  tc = function (p) {
-    m = s.getItem('_tcx') > n ? s.getItem('_tch') : 'afude-rubeola'
-    x = new XMLHttpRequest()
-    x.addEventListener('load', function () {
-      if (x.status == 200) {
-        s.setItem('_tch', x.responseText)
-        s.setItem('_tcx', n + 14400000)
-      }
-    })
-    x.open('GET', 'https://visitantes.alhur.es/'+m+'.xml?r='+d.referrer+'&c='+c+(p?'&p='+p:''))
-    x.send()
-  }
-  tc()
-})(document, localStorage, 'p9fq25')
-  </script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gerador de tabelas" />
+    <meta
+      property="og:description"
+      content="Todos contra todos. Defina os times, clique, imprima, feche a página. Grátis, sem cadastro, sem burocracia."
+    />
+    <meta property="og:image" content="/static/logo.png" />
+    <meta
+      name="description"
+      content="Defina os times, clique, imprima, feche a página. Grátis, sem cadastro, sem burocracia."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link rel="icon" type="image/png" href="/static/logo.png" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css"
+    />
+    <link rel="stylesheet" href="/static/site.css" />
+    <title>Gerador de tabelas de campeonato</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/" style="text-decoration: none; color: inherit"
+          >Gerador de tabelas de todos contra todos</a
+        >
+      </h1>
+    </header>
 
-<header>
-  <h1>
-    <a href="/" style="text-decoration: none; color: inherit">Gerador de tabelas de todos contra todos</a>
-  </h1>
-</header>
+    <main>
+      <div class="pure-g">
+        <div class="pure-u-2-5 form">
+          <form
+            id="form"
+            action="#"
+            method="get"
+            class="pure-form pure-form-stacked"
+          >
+            <fieldset>
+              <label for="teams">Nomes dos times</label>
+              <textarea
+                id="teams"
+                name="teams"
+                placeholder="Um time em cada linha"
+              ></textarea>
 
-<main>
+              <label for="return">
+                <input id="return" name="return" type="checkbox" /> Turno e
+                returno?
+              </label>
+              <label for="shuffle">
+                <input id="shuffle" name="shuffle" type="checkbox" /> Embaralhar
+                times?
+              </label>
 
-  <div class="pure-g">
-    <div class="pure-u-2-5 form">
-  
-      <form id="form" action="#" method="get" class="pure-form pure-form-stacked">
-        <fieldset>
-          <label for="teams">Nomes dos times</label>   
-          <textarea id="teams" name="teams" placeholder="Um time em cada linha"></textarea>
-  
-          <label for="return">
-            <input id="return" name="return" type="checkbox"> Turno e returno?
-          </label>
-          <label for="shuffle">
-            <input id="shuffle" name="shuffle" type="checkbox"> Embaralhar times?
-          </label>
-  
-          <button disabled type="submit" class="pure-button pure-button-primary">Aguarde...</button>
-  
-        </fieldset>
-      </form>
-  
-    </div>
-    <div class="pure-u-3-5 desc">
-  
-      <p>Digite os nomes dos times, um em cada linha, e aperte o botão azul.</p>
-  
-      <p>Uma linda e imprimível tabela de todos-contra-todos será gerada, com os jogos balanceadamente distribuídos entre as rodadas.</p>
-  
-    </div>
-  </div>
+              <button
+                disabled
+                type="submit"
+                class="pure-button pure-button-primary"
+              >
+                Aguarde...
+              </button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="pure-u-3-5 desc">
+          <p>
+            Digite os nomes dos times, um em cada linha, e aperte o botão azul.
+          </p>
 
-  <script type="text/javascript">
-	atOptions = {
-		'key' : '0c9d6daa95659d7574a12c0286c8b2b1',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.madcpms.com/0c9d6daa95659d7574a12c0286c8b2b1/invoke.js"></scr' + 'ipt>');
-  </script>
+          <p>
+            Uma linda e imprimível tabela de todos-contra-todos será gerada, com
+            os jogos balanceadamente distribuídos entre as rodadas.
+          </p>
+        </div>
+      </div>
 
-  <div id="explanation">
-    <h2>A teoria da geração de tabelas de todos-contra-todos</h2>
-    <p>Se você tentou fazer a tabela à mão e se decepcionou com a sua incapacidade, não fique assim, a coisa é realmente mais complicada do que parece. Para se confortar, pense que grandes campeonatos de futebol, como o Campeonato Mineiro de 2006, já tiveram a <a target="_blank" href="http://web.archive.org/web/20141220221439/http://esportes.terra.com.br/noticias/0,,OI799885-EI1846,00-FMF+enfim+divulga+a+tabela+do+Mineiro+de.html">divulgação de suas tabelas atrasadas</a> pela falta de um homem conhecedor da técnica para a distribuição efetiva das rodadas.</p>
-    <p>À primeira vista parece simples, o time A joga contra todos os outros, o time B joga contra todos os outros menos o A, o time C contra todos exceto A e B e assim por diante, você chega a uma lista com todos os jogos que <u>devem</u> ser jogados. Mas o difícil mesmo é saber a ordem dos jogos: se todos os times devem jogar em todas as rodadas, contra quem eles devem jogar, para que no final as combinações de jogos não se compliquem e dois times sobrem em uma rodada, já tendo jogado entre eles e esperando outros adversários, já ocupados?</p>
-    <p>Em campeonatos de 4 times dá pra fazer, mais ou menos no olhômetro, a tabela direitinho; com 5 já complica, mas com sorte e paciência ainda funciona. De 6 pra cima já beira ao impossível. Precisamos do <a target="_blank" href="http://en.wikipedia.org/wiki/Round-robin_tournament">algoritmo:</a></p>
-    <p>A descoberta deste algoritmo data de 1883. Há outras formas de fazer o cálculo, mas o princípio é o mesmo em todas, de modo que provavelmente a geração de todas as tabelas de campeonatos de todos os esportes mundo afora passa pelo seguinte procedimento:</p>
-    <pre>
+      <div id="banner-ad">
+        <style>
+          #banner-ad > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-width: 4px;
+            padding: 2px 4px;
+            text-decoration: none;
+            position: relative;
+          }
+          #banner-ad,
+          #banner-ad > a,
+          #banner-ad > a > img {
+            width: 500px;
+            height: 200px;
+          }
+          #banner-ad > a > a {
+            text-decoration: none;
+            background-color: white;
+            padding: 4px;
+            position: absolute;
+            left: 0;
+            top: -13px;
+            margin: 0 auto;
+            display: inline-block;
+            font-size: 70%;
+          }
+        </style>
+        <script>
+          fetch(
+            'https://etleneum.com/~/contract/cko001spd3/state/.current_ads.ck87g0xew0003tk01e1idzath'
+          )
+            .then(r => r.json())
+            .then(({value: ad}) => {
+              let s = document.getElementById('banner-ad')
+              let a = document.createElement('a')
+              let l = document.createElement('a')
+              s.appendChild(a)
+              a.appendChild(l)
+              l.href =
+                'https://banners.etleneum.com/#/ck87g0xew0003tk01e1idzath'
+              l.innerHTML = 'anuncie aqui'
+              l.target = '_blank'
+
+              if (!ad) {
+                a.href =
+                  'https://banners.etleneum.com/#/ck87g0xew0003tk01e1idzath'
+                a.innerHTML = placeholder
+                return
+              }
+
+              let {text, image_url, link} = ad
+              a.href = link
+              if (image_url) {
+                let c = document.createElement('img')
+                c.src = image_url
+                a.appendChild(c)
+              } else {
+                a.innerText = text
+                a.style.display = 'flex'
+                a.style.justifyContent = 'center'
+                a.style.alignItems = 'center'
+              }
+            })
+        </script>
+      </div>
+
+      <div id="explanation">
+        <h2>A teoria da geração de tabelas de todos-contra-todos</h2>
+        <p>
+          Se você tentou fazer a tabela à mão e se decepcionou com a sua
+          incapacidade, não fique assim, a coisa é realmente mais complicada do
+          que parece. Para se confortar, pense que grandes campeonatos de
+          futebol, como o Campeonato Mineiro de 2006, já tiveram a
+          <a
+            target="_blank"
+            href="http://web.archive.org/web/20141220221439/http://esportes.terra.com.br/noticias/0,,OI799885-EI1846,00-FMF+enfim+divulga+a+tabela+do+Mineiro+de.html"
+            >divulgação de suas tabelas atrasadas</a
+          >
+          pela falta de um homem conhecedor da técnica para a distribuição
+          efetiva das rodadas.
+        </p>
+        <p>
+          À primeira vista parece simples, o time A joga contra todos os outros,
+          o time B joga contra todos os outros menos o A, o time C contra todos
+          exceto A e B e assim por diante, você chega a uma lista com todos os
+          jogos que <u>devem</u> ser jogados. Mas o difícil mesmo é saber a
+          ordem dos jogos: se todos os times devem jogar em todas as rodadas,
+          contra quem eles devem jogar, para que no final as combinações de
+          jogos não se compliquem e dois times sobrem em uma rodada, já tendo
+          jogado entre eles e esperando outros adversários, já ocupados?
+        </p>
+        <p>
+          Em campeonatos de 4 times dá pra fazer, mais ou menos no olhômetro, a
+          tabela direitinho; com 5 já complica, mas com sorte e paciência ainda
+          funciona. De 6 pra cima já beira ao impossível. Precisamos do
+          <a
+            target="_blank"
+            href="http://en.wikipedia.org/wiki/Round-robin_tournament"
+            >algoritmo:</a
+          >
+        </p>
+        <p>
+          A descoberta deste algoritmo data de 1883. Há outras formas de fazer o
+          cálculo, mas o princípio é o mesmo em todas, de modo que provavelmente
+          a geração de todas as tabelas de campeonatos de todos os esportes
+          mundo afora passa pelo seguinte procedimento:
+        </p>
+        <pre>
     Rodada 1 (A contra J, B contra I, C contra H etc.)
     A  B  C  D  E
-    J  I  H  G  F</pre>
-    <p>Ordena-se os times segundo qualquer ordem e divide-se-os em duas linhas (nosso exemplo segue a ordem alfabética). Anota-se aí a primeira rodada, o time da linha de cima conta o time imediatamente abaixo.</p>
-    <pre>
+    J  I  H  G  F</pre
+        >
+        <p>
+          Ordena-se os times segundo qualquer ordem e divide-se-os em duas
+          linhas (nosso exemplo segue a ordem alfabética). Anota-se aí a
+          primeira rodada, o time da linha de cima conta o time imediatamente
+          abaixo.
+        </p>
+        <pre>
     Rodada 2 (A contra I, B contra H, C contra G etc.)
     A  J  B  C  D
-    I  H  G  F  E</pre>
-    <p>Para a próxima rodada, giram-se os times no sentido horário (ou seja, os de cima vão para a direita, os de baixo para a esquerda, o último de cima vai para o final da linha de baixo e o primeiro da linha de baixo sobe para a linha de cima), mantendo-se um deles fixo (no caso, o A).</p>
-    <p>E assim sucessicamente, até que se chega à última rodada:</p>
-    <pre>
+    I  H  G  F  E</pre
+        >
+        <p>
+          Para a próxima rodada, giram-se os times no sentido horário (ou seja,
+          os de cima vão para a direita, os de baixo para a esquerda, o último
+          de cima vai para o final da linha de baixo e o primeiro da linha de
+          baixo sobe para a linha de cima), mantendo-se um deles fixo (no caso,
+          o A).
+        </p>
+        <p>E assim sucessicamente, até que se chega à última rodada:</p>
+        <pre>
     Rodada 9 (A contra B, C contra J, E contra I etc.)
     A  C  D  E  F
-    B  J  I  H  G</pre>
-    <p>Que é exatamente uma posição antes da posição inicial -- ou seja, caso girassem-se os times novamente, teríamos de novo a distribuição inicial dos times, perceba -- e aí completa-se o ciclo, todos jogaram contra todos, um jogo por rodada.</p>
-    <p>Para campeonatos com número ímpar de times, um time fica sem jogar a cada rodada. No algoritmo, basta adicionar um time falso à roda, e quem cair contra o time falso não joga.</p>
-  </div>
-  </main>
-  <footer>
-    © <a href="https://alhur.es/">alhures software</a> 2015
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-  <script src=/bundle.js></script>
-</body>
+    B  J  I  H  G</pre
+        >
+        <p>
+          Que é exatamente uma posição antes da posição inicial -- ou seja, caso
+          girassem-se os times novamente, teríamos de novo a distribuição
+          inicial dos times, perceba -- e aí completa-se o ciclo, todos jogaram
+          contra todos, um jogo por rodada.
+        </p>
+        <p>
+          Para campeonatos com número ímpar de times, um time fica sem jogar a
+          cada rodada. No algoritmo, basta adicionar um time falso à roda, e
+          quem cair contra o time falso não joga.
+        </p>
+      </div>
+    </main>
+    <footer>© <a href="https://alhur.es/">alhures software</a> 2015</footer>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/bundle.js"></script>
+  </body>
+</html>

@@ -47,16 +47,7 @@ $('body').on('submit', 'form', function (e) {
 
   var rendered = $('<div>')
     .append(`
-<script type="text/javascript">
-	atOptions = {
-		'key' : '0c9d6daa95659d7574a12c0286c8b2b1',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.madcpms.com/0c9d6daa95659d7574a12c0286c8b2b1/invoke.js"></scr' + 'ipt>');
-</script>
+
     `)
     .append(
       $('<div>').addClass('pure-u-1').append(
